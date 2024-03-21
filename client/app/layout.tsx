@@ -4,6 +4,8 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import { VideoContextProvider } from "./context/videoContext";
+
 export const metadata: Metadata = {
   title: "Interviewer",
   description: "App for interviewing by next js",
@@ -16,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <VideoContextProvider>
+          {children}
+        </VideoContextProvider>
+      </body>
     </html>
   );
 }
