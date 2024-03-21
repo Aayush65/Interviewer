@@ -33,7 +33,7 @@ export default function Home() {
 		return () => {
 			socket.off("join:room");
 		};
-	}, [room, name, router]);
+	}, [room, name]);
 
 
 	function generateId(length: number) {

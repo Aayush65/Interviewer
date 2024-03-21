@@ -27,7 +27,7 @@ export default function Room({ params }: { params: { Room: string } }) {
         return () => {
             socket.off("join:room");
         }
-    }, [name, room, router, roomId]);
+    }, [isConnected]);
 
     return (
         <main>
